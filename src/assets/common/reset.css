@@ -1,0 +1,84 @@
+@charset "utf-8";
+html,body{
+  width: 100%;
+}
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.5);
+  background-color: #e1e1e1;
+  /*background-color: #fff;*/
+  line-height: 1;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+ul li{
+  list-style: none;
+}
+/*清除浮动*/
+.clearfix:after{
+  display: block;
+  width: 100%;
+  height: 0;
+  content: '';
+  clear: both;
+  visibility: hidden;
+}
+/*弹性盒子布局*/
+.flex_parent{
+  overflow: hidden;
+
+  display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older WebKit browsers.  */
+  display: -moz-box;    /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;  /* 新版本语法： Chrome 21+ */
+  display: flex;       /* 新版本语法： Opera 12.1, Firefox 22+ */
+
+  /*垂直居中*/
+  /*老版本语法*/
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  /*混合版本语法*/
+  -ms-flex-align: center;
+  /*新版本语法*/
+  -webkit-align-items: center;
+  align-items: center;
+
+  /*水平居中*/
+  /*老版本语法*/
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  /*混合版本语法*/
+  -ms-flex-pack: center;
+  /*新版本语法*/
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  margin: 0;
+  /* height: 100%;*/
+  width: 100% /* needed for Firefox */
+}
+.flex_parent .flex_child_1{
+  -ms-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*设置单行省略号*/
+.one_ellipsis{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+/*多行省略号：默认两行*/
+.multi_ellipsis{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
